@@ -1,0 +1,18 @@
+<h1>Available Plans</h1>
+ <%= link_to 'Create New Plan', new_plan_path %>
+<table> 
+<tr>
+    <th>Plan Name</th>
+    <th>Monthly Fee</th>
+    <th colspan="2"></th>
+</tr>
+<% @plan.each do |plan| %> <tr>
+<td><%= plan.plan_name %></td>
+<td><%= plan.monthly_fee %></td>
+<td><%= link_to 'Show', plan_path(plan) %></td>
+    <td><%= link_to 'Destroy', plan_path(plan),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  code: MyText
+  unit_price: MyString
+  max_unit_limit: MyString
+  plan: one
+
+two:
+  name: MyString
+  code: MyText
+  unit_price: MyString
+  max_unit_limit: MyString
+  plan: two

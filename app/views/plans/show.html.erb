@@ -1,0 +1,59 @@
+ <p> <strong>Plan Name:</strong> <%= @plan.plan_name %>
+</p>
+<p> <strong>Monthly Fee:</strong> <%= @plan.monthly_fee %>
+</p>
+
+<h2>Features</h2>
+<% @plan.features.each do |feature| %>
+  <p>
+    <strong>Name:</strong>
+    <%= feature.name %>
+  </p>
+ 
+  <p>
+    <strong>Code:</strong>
+    <%= feature.code %>
+  </p>
+
+   <p>
+    <strong>unit_price:</strong>
+    <%= feature.unit_price %>
+  </p>
+
+   <p>
+    <strong>max_unit_limit:</strong>
+    <%= feature.max_unit_limit %>
+  </p>
+
+
+<% end %>
+
+<h2>Add Feature:</h2>
+<%= form_with(model: [ @plan, @plan.features.build ], local: true) do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.label :code %><br>
+    <%= form.text_area :code %>
+  </p>
+
+   <p>
+    <%= form.label :unit_price %><br>
+    <%= form.text_area :unit_price %>
+  </p>
+
+   <p>
+    <%= form.label :max_unit_limit %><br>
+    <%= form.text_area :max_unit_limit %>
+  </p>
+
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+
+<%= link_to 'Back', plans_path %>

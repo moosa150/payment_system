@@ -1,0 +1,16 @@
+ <h1>Create Plan</h1>
+
+ <%= form_with scope: :plan, url: plans_path, local: true do |form| %>
+<p>
+<%= form.label :plan_name %><br>
+<%= form.text_field :plan_name %> </p>
+<p>
+<%= form.label :monthly_fee %><br> 
+<%= form.text_area :monthly_fee %>
+</p>
+  <p>
+    <%= form.submit %>
+</p>
+<% end %>
+
+

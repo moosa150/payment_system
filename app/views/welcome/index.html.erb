@@ -1,14 +1,12 @@
 
-
-
-
 <style>
 
-.background {
-  background-image: url("<%= asset_path('/app/assets/images/background.png') %>");
-}
+
 
 section{
+}
+.background {
+    background-image: url(bg.jpg);
 }
 .container {
 
@@ -32,7 +30,6 @@ h1 {
   text-align: center
 }
 a:link, a:visited {
-
   background-color: black;
   color: white;
   padding: 10px 20px;
@@ -41,6 +38,7 @@ a:link, a:visited {
 }
 
 a:hover, a:active {
+   align: center;
   background-color: gray;
 }
 
@@ -61,3 +59,5 @@ a:hover, a:active {
   </p>
 
 <% end %>
+
+<%= link_to 'Plans', controller: 'plans' %>
