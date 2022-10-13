@@ -1,3 +1,48 @@
+
+<style>
+
+.background {
+  background-image: url("<%= asset_path('/app/assets/images/background.png') %>");
+}
+
+section{
+}
+.container {
+
+  width: 50%;
+  border: 2px solid black;
+  padding: 10px;
+  text-align: center;
+
+    position: absolute;
+    left: 35%;
+    top: 35%;
+    height: 150px;
+    width: 300px;
+
+}
+
+h1 {
+  background-color: black;
+  color: white;
+  font-family: serif;
+  text-align: center
+}
+a:link, a:visited {
+
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: gray;
+}
+
+
+</style>
 <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>

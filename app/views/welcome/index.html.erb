@@ -4,24 +4,46 @@
 
 <style>
 
+.background {
+  background-image: url("<%= asset_path('/app/assets/images/background.png') %>");
+}
+
+section{
+}
+.container {
+
+  width: 50%;
+  border: 2px solid black;
+  padding: 10px;
+  text-align: center;
+
+    position: absolute;
+    left: 35%;
+    top: 35%;
+    height: 150px;
+    width: 300px;
+
+}
+
 h1 {
   background-color: black;
   color: white;
-  text-align: center;
-  font-family: serif
+  font-family: serif;
+  text-align: center
 }
 a:link, a:visited {
-  position: absolute;
-  left: 47%;
+
   background-color: black;
   color: white;
-  text-align: center;
   padding: 10px 20px;
-  display: inline-block
+  text-align: center;
+  display: inline-block;
 }
+
 a:hover, a:active {
   background-color: gray;
 }
+
 
 </style>
 
@@ -34,9 +56,7 @@ a:hover, a:active {
   <%= link_to "Logout", destroy_user_session_path, method: :delete %>
 <% else %>
   <p>
-  <%= link_to "Sign up", new_user_registration_path %>  </p>
-  |
-  <p>
+  <%= link_to "Sign up", new_user_registration_path %>  |
   <%= link_to "Login", new_user_session_path %> 
   </p>
 
